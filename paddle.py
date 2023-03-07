@@ -12,14 +12,15 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
         self.goto(position)
+        self.move_speed = 30
 
     # Move Paddle Functions
     def go_up(self):
         """Moves the paddle up"""
-        new_y = self.ycor() + 30
+        new_y = self.ycor() + self.move_speed
         self.goto(self.xcor(), new_y)
 
     def go_down(self):
         """Moves the paddle down"""
-        new_y = self.ycor() - 30
+        new_y = self.ycor() - self.move_speed
         self.goto(self.xcor(), new_y)

@@ -10,7 +10,7 @@ PLAYER_WIN_FONT = ("Courier", 36, "bold")
 WHITE = "#ECE3C9"
 ORANGE = "#E3802A"
 TEAL = "#2DC2C7"
-WIN_SCORE = 2
+WIN_SCORE = 5
 
 class Scoreboard(Turtle):
     """Scoredboard Class"""

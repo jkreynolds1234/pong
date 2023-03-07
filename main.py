@@ -60,11 +60,17 @@ class PongGame():
             if self.ball.ycor() < (self.r_paddle.ycor() + 60) and self.ball.ycor() > (self.r_paddle.ycor() - 60):
                 if self.ball.xcor() > 320 and self.ball.xcor() < 360 and self.ball.x_move > 0:
                     self.ball.bounce_x()
+                    # Compensates for screen refresh rate increasing so ball moves faster, but paddle movement reamins the same
+                    self.l_paddle.move_speed -= 1
+                    self.r_paddle.move_speed -= 1
 
             # Detect collision with left paddle
             if self.ball.ycor() < (self.l_paddle.ycor() + 60) and self.ball.ycor() > (self.l_paddle.ycor() - 60):
                 if self.ball.xcor() < -320 and self.ball.xcor() > -360 and self.ball.x_move < 0:
                     self.ball.bounce_x()
+                    # Compensates for screen refresh rate increasing so ball moves faster, but paddle movement reamins the same
+                    self.l_paddle.move_speed -= 1
+                    self.r_paddle.move_speed -= 1
 
             # Detect R paddle miss
             if self.ball.xcor() > 380:

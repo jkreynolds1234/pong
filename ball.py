@@ -27,6 +27,7 @@ class Ball(Turtle):
     def bounce_x(self):
         """Makes ball bounce off paddle in opp of og direction"""
         self.x_move *= -1
+        # Increase ball speed slightly
         self.move_speed *= 0.9
 
     def reset_position(self):
