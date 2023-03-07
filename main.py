@@ -6,7 +6,7 @@ from ball import Ball
 from scoreboard import Scoreboard
 
 BGCOLOR = "#22201A"
-WIN_SCORE = 2
+WIN_SCORE = 5
 
 class PongGame():
     """Class for Pong Game"""
@@ -58,12 +58,12 @@ class PongGame():
 
             # Detect collision with right paddle
             if self.ball.ycor() < (self.r_paddle.ycor() + 60) and self.ball.ycor() > (self.r_paddle.ycor() - 60):
-                if self.ball.xcor() > 320 and self.ball.xcor() < 360 and self.ball.move_speed > 0:
+                if self.ball.xcor() > 320 and self.ball.xcor() < 360 and self.ball.x_move > 0:
                     self.ball.bounce_x()
 
             # Detect collision with left paddle
             if self.ball.ycor() < (self.l_paddle.ycor() + 60) and self.ball.ycor() > (self.l_paddle.ycor() - 60):
-                if self.ball.xcor() < -320 and self.ball.xcor() > -360 and self.ball.move_speed < 0:
+                if self.ball.xcor() < -320 and self.ball.xcor() > -360 and self.ball.x_move < 0:
                     self.ball.bounce_x()
 
             # Detect R paddle miss
