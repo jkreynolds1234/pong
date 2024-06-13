@@ -6,7 +6,7 @@ from ball import Ball
 from scoreboard import Scoreboard
 
 BGCOLOR = "#22201A"
-WIN_SCORE = 5
+WIN_SCORE = 3
 
 class PongGame():
     """Class for Pong Game"""
@@ -40,9 +40,9 @@ class PongGame():
         self.l_paddle = Paddle((-350, 0))
 
         # Controls for left and right paddles
-        self.screen.onkeypress(self.r_paddle.go_up, "Up")
-        self.screen.onkeypress(self.r_paddle.go_down, "Down")
-        self.screen.onkeypress(self.l_paddle.go_up, "w")
+        self.screen.onkeypress(self.r_paddle.go_up, "k")
+        self.screen.onkeypress(self.r_paddle.go_down, "l")
+        self.screen.onkeypress(self.l_paddle.go_up, "a")
         self.screen.onkeypress(self.l_paddle.go_down, "s")
 
         while self.game_is_on:

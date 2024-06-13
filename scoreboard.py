@@ -10,7 +10,7 @@ PLAYER_WIN_FONT = ("Courier", 36, "bold")
 WHITE = "#ECE3C9"
 ORANGE = "#E3802A"
 TEAL = "#2DC2C7"
-WIN_SCORE = 5
+WIN_SCORE = 3
 
 class Scoreboard(Turtle):
     """Scoredboard Class"""
@@ -27,16 +27,16 @@ class Scoreboard(Turtle):
         self.color(ORANGE)
         self.write('L Player:', align=ALIGNMENT, font=LARGE_FONT)
         self.goto(0, 80)
-        self.write('Use the "w" and "s" keys to', align=ALIGNMENT, font=WELCOME_FONT)
+        self.write('Use the "a" and "s" keys to', align=ALIGNMENT, font=WELCOME_FONT)
         self.goto(0, 50)
         self.write('move the paddle up and down', align=ALIGNMENT, font=WELCOME_FONT)
         self.color(TEAL)
         self.goto(0, -25)
         self.write('R Player:', align=ALIGNMENT, font=LARGE_FONT)
         self.goto(0, -55)
-        self.write('Use the "up" and "down" arrow', align=ALIGNMENT, font=WELCOME_FONT)
+        self.write('Use the "k" and "l" keys to', align=ALIGNMENT, font=WELCOME_FONT)
         self.goto(0, -85)
-        self.write('keys to move paddle up and down', align=ALIGNMENT, font=WELCOME_FONT)
+        self.write('move the paddle up and down', align=ALIGNMENT, font=WELCOME_FONT)
         self.color(WHITE)
         self.goto(0, -170)
         self.write('Press "g" to start', align=ALIGNMENT, font=LARGE_FONT)
